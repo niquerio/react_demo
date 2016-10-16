@@ -12,7 +12,6 @@ export default class Home extends React.Component {
   render() {
     const {tree} = this.state;
     const BranchComponents = tree.map((branch,idx)=>{
-      console.log(tree)
       return <Branch key={idx} leaves={branch}/>
     });
     return (
