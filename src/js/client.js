@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MIDI from 'MIDI';
 import { Router, Route, IndexRoute, hashHistory } from "react-router";
 
 import Layout from './components/Layout.js'
@@ -12,6 +13,7 @@ $(function(){
     MIDI.loadPlugin({
       onsuccess: function(){
         const app = document.getElementById('app')
+        console.log('hi')
         ReactDOM.render(
           <Router history={hashHistory}>
               <Route path="/" component={Layout}>
