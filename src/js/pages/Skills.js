@@ -18,7 +18,6 @@ export default class Skills extends React.Component {
     const SkillComponents = question_generators.map((qg, idx)=>{
       return <Skill key={idx} skill={qg} branch={this.props.params.skill}/>; 
     }); 
-    console.log(question_generators);
     return (
       <div>
       <h1>{name}</h1>

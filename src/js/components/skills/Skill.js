@@ -4,7 +4,6 @@ import { Link } from "react-router";
 export default class Skill extends React.Component {
   render(){
     const {skill} = this.props;
-    console.log(skill)
     return(
       <li><Link to={`/skills/${this.props.branch}/${skill.slug}`}>{skill.name}</Link></li> 
     )
