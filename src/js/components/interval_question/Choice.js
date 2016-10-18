@@ -1,13 +1,8 @@
 import React from "react";
-import Player from '../../stores/PlayerStore';
 
 export default class Choice extends React.Component {
   playMidi(){
-    Player(
-
-
-
-this.props.choice.midi, function(){
+    MIDI.Player.loadFile(this.props.choice.midi, function(){
       MIDI.Player.stop();
       MIDI.Player.resume();
     });

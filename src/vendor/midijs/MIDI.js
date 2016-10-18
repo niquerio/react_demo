@@ -9,7 +9,7 @@
 	----------------------------------------------------------
 */
 
-if (typeof MIDI === 'undefined') var MIDI = {}; //added var for shim
+if (typeof MIDI === 'undefined') MIDI = {};
 
 (function(root) { 'use strict';
 
