@@ -7,12 +7,23 @@ export default class Choice extends React.Component {
       MIDI.Player.resume();
     });
   }
+  handleChange(e){
+    const selected = e.target.value
+    this.props.changeSelected(selected);
+  }
   render(){
     const {choice} = this.props;
+    var inputStyle = {
+      margin: '0px',
+      verticalAlign: 'middle',
+      position: 'relative',
+    }
     return(
-     <h4>{choice.name}  <button onClick={this.playMidi.bind(this)} type="button"  class="btn btn-default btn-lg">
+    <label class="radio-inline">
+     <input onChange={this.handleChange.bind(this)} type="radio" style={inputStyle} name="choicesRadio" id={choice.id} value={choice.id} /> {choice.name}  <button onClick={this.playMidi.bind(this)} type="button"  class="btn btn-default btn-lg">
   <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-</button></h4> 
+</button>
+    </label> 
     )
   }
 }

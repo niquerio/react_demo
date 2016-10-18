@@ -22,7 +22,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot --host 192.168.0.105 --port 8081",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot --host 192.168.56.101 --port 8081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

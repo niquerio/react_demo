@@ -21,11 +21,11 @@ class AnswerStore extends EventEmitter{
   }
 
   getCorrect(answer,slug) {
-    correct = this.answers[slug.slice(0,-2)].correct_answer 
-    return correct == answer
+    var correct = this.answers[slug.slice(0,-2)].correct_answer 
+    return { result: correct == answer, correct: correct}
   }
 }
 
-const AnswerStore = new AnswerStore
+const answerStore = new AnswerStore
 
-export default AnswerStore;
+export default answerStore;
